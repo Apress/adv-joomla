@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0">
+	<name>Form Builder</name>
+	<author>Dan Rahmel</author>
+	<version>1.1.0</version>
+	<description>Setup and administration for the forms displayed by the Form Builder plugin.</description>
+	
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<files folder="site">
+		<filename>index.html</filename>
+	</files>
+	<administration>
+		 <menu>Form Builder</menu>
+		 <files folder="admin">
+			<filename component="formbuilder">formbuilder.php</filename>
+			<filename>formbuilder.xml</filename>
+			<folder>controllers</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<folder>sql</folder>
+		 </files>
+	</administration>
+</extension>

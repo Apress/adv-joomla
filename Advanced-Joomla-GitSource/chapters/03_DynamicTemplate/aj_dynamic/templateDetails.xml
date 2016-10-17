@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" client="site">
+	<name>aj_dynamic</name>
+	<creationDate>25 September 2012</creationDate>
+	<author>Dan Rahmel</author>
+	<authorEmail>drahmel@joomlajumpstart.com</authorEmail>
+	<authorUrl>http://www.joomlajumpstart.com</authorUrl>
+	<copyright>Copyright (C) 2012 - 2013 Dan Rahmel. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>2.5.0</version>
+	<description>Responsive template created in the book Advanced Joomla!</description>
+
+	<files>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+
+	<positions>
+		<position>debug</position>
+		<position>banner</position>
+		<position>fullnav</position>
+		<position>leftcol</position>
+		<position>centertop</position>
+		<position>centercol</position>
+		<position>centerbottom</position>
+		<position>rightcol</position>
+		<position>shared</position>
+		<position>fullfooter</position>
+		<position>preloadimages</position>
+		<position>dev</position>
+	</positions>
+
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field name="include_jquery" type="radio" default="1" label="Include jQuery" description="Inject jQuery library reference into head section">
+				  <option value="1">Yes</option>
+				  <option value="0">No</option>
+				</field>
+
+				<field name="background_color"  type="color" default="#ffffff"
+					label="Background color"
+					description="Set the background color of the body tag"
+					/>
+				<field name="logo" class="" type="media" default=""
+					label="Full logo banner"
+					description="Select an image to display on the home page banner" />
+					
+				<field name="slimlogo" class="" type="media" default=""
+					label="Slim logo banner"
+					description="Select an image to display as the baner on subhome pages" />
+					
+				<field name="sitetitle"  type="text" default=""
+					label="Site banner title"
+					description="Title displayed if there is no banner image (and alt text on banner image)"
+					filter="string" />
+
+				<field name="sitesubtitle"  type="text" default="Set this text in the Template settings in the Administrator interface"
+					label="Site banner subtitle"
+					description="Subtitle if there is no banner image"
+					filter="string" />
+
+				<field name="fluidContainer"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="Fluid or static layout"
+					description="Make the site render adjust to the window size or remain static"
+				>
+					<option value="1">Fluid layout</option>
+					<option value="0">Static layout</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

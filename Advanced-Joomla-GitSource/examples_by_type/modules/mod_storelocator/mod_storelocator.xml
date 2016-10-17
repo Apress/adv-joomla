@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+     <name>Store Locator</name>
+     <version>1.0.0</version>
+     <description>This module will displays a Google map of store locations.<br/>
+     Learn how to create this extension and many others in Advanced Joomla from APress:<br/>
+     <a href='http://www.amazon.com/Advanced-Joomla-Dan-Rahmel/dp/143021628X'>
+     /modules/mod_storelocator/advanced_joomla_cover.jpg
+     </a>
+     </description>
+     	<!-- This section is for Joomla 1.5 compatibility -->
+	<params>
+		<param name="center_latitude" type="text" default="-34.387" label="Map center latitude" 
+			description="Display map with this latitude at the center." />
+		<param name="center_longitude" type="text" default="150.634" label="Map center longitude" 
+			description="Display map with this longitude at the center." />
+		<param name="markers" type="textarea" default="" label="Markers (lat,long,title,url)" 
+			description="Marker entries" />
+	</params>
+     	<!-- This section is for Joomla 1.6 compatibility -->
+ 	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="center_latitude"
+					type="text"
+					default="-34.387"
+					label="Map center latitude"
+					description="Display map with this latitude at the center." />
+				<field 
+					name="center_longitude"
+					type="text"
+					default="150.634"
+					label="Map center longitude"
+					description="Display map with this longitude at the center." />
+				<field 
+					name="markers"
+					type="textarea"
+					cols="50" 
+					rows="10"
+					default="-34.367,150.614,First St. store,/first-st|
+						-34.387,150.634,Second St. store,/second-st"
+					label="Markers (lat,long,title,url)"
+					description="Marker entries" />
+			</fieldset>
+		</fields>
+	</config>
+    <files>
+          <filename module="mod_storelocator">mod_storelocator.php</filename>
+     </files>
+</install>

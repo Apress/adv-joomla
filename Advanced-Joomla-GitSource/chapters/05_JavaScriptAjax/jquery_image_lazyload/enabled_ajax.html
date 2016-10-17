@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Lazy Load Enabled wit AJAX Content</title>
+  <meta name="generator" content="Mephisto" />
+  <link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/tuupola" title="Atom feed" />
+  <link href="http://www.appelsiini.net/stylesheets/main2.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+  #sidebar {
+    width: 0px;
+  }
+
+  #content {
+    width: 770px;
+  }
+  
+  </style>
+
+  <script>
+  var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-190966-1']);
+      _gaq.push(['_trackPageview']);
+      _gaq.push(['_trackPageLoadTime']);
+    
+  (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+</head>
+
+<body>    
+  <div id="wrap"> 
+    <div id="header">
+      <p>
+        <h1>Lazy Load</h1><br />
+        <small>Image lazy loader plugin for jQuery.</small>
+        <ul id="nav">
+          <li id="first"><a href="/" class="active">weblog</a></li>
+          <li><a href="/projects" class="last">projects</a></li>
+          <!--
+          <li><a href="/cv" class="last">cv</a></li>
+        -->
+        </ul>
+      </p>
+    </div>
+    <div id="content">
+      
+  <h2>Plugin enabled</h2>
+  <div class="entry">
+    
+    <p>
+      Images are loaded via AJAX(H) call after you click the container. Lazy Load 
+      is applied in the callback.
+    </p>
+
+    <code>
+      <pre>
+ $("#container").one("click", function() {
+     $("#container").load("images.html", function(response, status, xhr) {
+         $("img.lazy").lazyload();
+     });              
+ });</pre>
+
+ <pre> &lt;img class="lazy" src="img/grey.gif" data-original="img/example.jpg" width="765" height="574"&gt;</pre>
+
+    </code>
+
+    <div id="container">
+        Click to load content...
+    </div>
+
+    </div>
+    <div id="sidebar">
+
+  </div>
+  
+  <div id="footer">
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" charset="utf-8"></script>
+  <script src="jquery.lazyload.js?v=1.8.5" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8">
+      $(function() {
+          $("#container").one("click", function() {
+              $("#container").load("enabled.html #container", function(response, status, xhr) {
+                    $("img.lazy").lazyload();
+              });              
+          });
+      });
+  </script>
+</body>
+</html>

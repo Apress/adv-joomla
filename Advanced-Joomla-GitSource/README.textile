@@ -1,0 +1,66 @@
+h1. Advanced Joomla source code
+
+h2. What is this?
+
+* This is the source code for the Advanced Joomla! book by Dan Rahmel from APress 
+* "Advanced Joomla book on Amazon":http://www.amazon.com/Advanced-Joomla-Dan-Rahmel/dp/143021628X
+* Official site: "Joomla Jumpstart at http://www.joomlajumpstart.com":http://www.joomlajumpstart.com
+
+h2. Is there a newer version of the source code?
+
+* I try to update the source code for compatibility with each new version of Joomla. Check out the Github site for the latest version:
+
+https://github.com/drahmel/Advanced-Joomla
+
+h2. What is Advanced Joomla!?
+
+A book from APress that covers advanced template design (including mobile), extension creation, and full site configuration.
+
+!https://raw.github.com/drahmel/Advanced-Joomla/b709b06e5d262dcdaca5fceb618e6b8b2e694828/chapters/cover.jpg(Advanced Joomla cover)!
+
+h2. What is included in the source code?
+
+All of the example code from the book organized by chapter and also by type (components, modules, etc.)
+
+A variety of extensions including:
+
+h3. Modules
+
+* mod_twitter (ch6) -- Module that uses the Twitter API to search using Twitter keywords and display relevant tweets
+* mod_bingnews (ch6) -- Modules that searches the Bing news API and displays relevant new items
+* mod_flickr (ch6) -- Searches the Flickr API for images that match a search term
+* mod_store_locator (ch6) -- Google Map module that displays store locations configured in the module administrator interface
+* mod_facebook_like -- Adds a Facebook Like button to specified pages
+
+h3. Components
+	
+* com_article_librarian (ch13) -- Displays list of article versions
+* com_article_stencial (ch12) -- Templating engine for articles
+* com_form_builder -- Allows construction of dynamic forms that can be used in any article via the plugin
+* com_ajax_request -- Simple article insertion through Ajax call
+* com_barchart (ch13) -- Create server-side bar charts with gradient fills
+
+h3. Templates
+
+* aj_dynamic (ch3) -- Completely dynamic Joomla template
+
+h3. Widgets
+
+Sample code of widgets demonstrated in Advanced Joomla.
+
+* chatango (ch2)
+* google_calendar (ch2)
+* google_map_wizard (ch2)
+* survey_monkey (ch2)
+
+h3. SQL statements
+
+Query examples from chapter 9 and a PHP script to convert all Joomla tables from MyISAM to InnoDB.
+
+h3. Test scripts
+
+Testing scripts from chapter 10 for JMeter and Selenium that can be used to test your Joomla site.
+
+h1. Copyright
+
+* Copyright (c) 2013-2014 Dan Rahmel. All rights reserved.
